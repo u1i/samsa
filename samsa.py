@@ -7,6 +7,7 @@ app = Bottle()
 def error404(error):
     return "This is samsa. Try /swagger"
 
+@app.route('/convert/v2tov3', method='POST')
 @app.route('/v2tov3', method='POST')
 def convert_v2_to_v3():
 
@@ -29,8 +30,12 @@ def convert_v2_to_v3():
     else:
         response.headers['Content-Type'] = 'text/yaml; charset=UTF-8'
 
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
+
     return output
 
+@app.route('/convert/v3tov2', method='POST')
 @app.route('/v3tov2', method='POST')
 def convert_v3_to_v2():
 
@@ -53,9 +58,13 @@ def convert_v3_to_v2():
     else:
         response.headers['Content-Type'] = 'text/yaml; charset=UTF-8'
 
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
+
     return output
 
 @app.get('/swagger')
+@app.get('/swagger.json')
 def swagger():
 
     swagger = '''{
@@ -120,6 +129,7 @@ def swagger():
         },
         "definitions": {}
     }'''
-
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
     response.headers['Content-Type'] = 'application/json; charset=UTF-8'
     return swagger

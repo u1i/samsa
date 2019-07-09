@@ -36,7 +36,6 @@ Convert between OpenAPI v2 and v3 formats, it even converts YAML v2 to JSON v3 a
 
 ## Or do all that with Postman
 
-[Swagger](samsa_swagger.json)
 [Postman Collection](samsa.postman_collection.json)
 
 ![](example1.png)
