@@ -63,73 +63,74 @@ def convert_v3_to_v2():
 
     return output
 
+@app.get('/convert/swagger')
 @app.get('/swagger')
 @app.get('/swagger.json')
+@app.get('/convert/swagger.json')
 def swagger():
 
     swagger = '''{
-        "swagger": "2.0",
-        "info": {
-            "version": "",
-            "title": "samsa",
-            "description": "Convert between OpenAPI v2 and v3 formats (YAML/JSON)"
-        },
-        "host" : "",
-        "basePath": "/convert",
-        "paths": {
-            "/v3tov2": {
-                "get": {
-                    "operationId": "GET_v3tov2",
-                    "summary": "OpenAPI 3.0 to Swagger",
-                    "parameters": [
-                        {
-                            "name": "format",
-                            "in": "query",
-                            "type": "string",
-                            "enum": [
-                                "json",
-                                "yaml"
-                            ]
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": ""
-                        },
-                        "400": {
-                            "description": ""
-                        }
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "samsa",
+        "description": "Convert between OpenAPI v2 and v3 formats (YAML/JSON)"
+    },
+    "basePath": "/convert",
+    "paths": {
+        "/v3tov2": {
+            "post": {
+                "operationId": "POST_v3tov2",
+                "summary": "OpenAPI 3.0 to Swagger",
+                "parameters": [
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "json",
+                            "yaml"
+                        ]
                     }
-                }
-            },
-            "/v2tov3": {
-                "get": {
-                    "operationId": "v2tov3",
-                    "summary": "Swagger to OpenAPI 3.0",
-                    "parameters": [
-                        {
-                            "name": "format",
-                            "in": "query",
-                            "type": "string",
-                            "enum": [
-                                "json",
-                                "yaml"
-                            ]
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": ""
-                        },
-                        "400": {
-                            "description": ""
-                        }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "400": {
+                        "description": ""
                     }
                 }
             }
         },
-        "definitions": {}
-    }'''
+        "/v2tov3": {
+            "post": {
+                "operationId": "v2tov3",
+                "summary": "Swagger to OpenAPI 3.0",
+                "parameters": [
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "json",
+                            "yaml"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "400": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}'''
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS, HEAD'
     response.headers['Content-Type'] = 'application/json; charset=UTF-8'

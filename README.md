@@ -39,3 +39,8 @@ Convert between OpenAPI v2 and v3 formats, it even converts YAML v2 to JSON v3 a
 [Postman Collection](samsa.postman_collection.json)
 
 ![](example1.png)
+
+
+### Credits
+
+Leveraging the great work from [this community project](https://github.com/LucyBot-Inc/api-spec-converter)
