@@ -2,7 +2,7 @@
 
 Convert between OpenAPI v2 and v3 formats, it even converts YAML v2 to JSON v3 and all other combinations.
 
-![](samsa4.png)
+![](samsa5.png)
 
 ## Run
 
