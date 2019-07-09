@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "5ce8a8cf-6beb-41c0-b2e1-68cb030c61cb",
+		"name": "samsa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v2tov3 YAML In YAML Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "swagger: '2.0'\ninfo:\n  version: ''\n  title: samsa\n  description: Convert between OpenAPI v2 and v3 formats (YAML/JSON)\nbasePath: /convert\npaths:\n  /v3tov2:\n    get:\n      operationId: GET_v3tov2\n      summary: OpenAPI 3.0 to Swagger\n      parameters:\n        - name: format\n          in: query\n          type: string\n          enum:\n            - json\n            - yaml\n      responses:\n        '200':\n          description: ''\n        '400':\n          description: ''\n  /v2tov3:\n    get:\n      operationId: v2tov3\n      summary: Swagger to OpenAPI 3.0\n      parameters:\n        - name: format\n          in: query\n          type: string\n          enum:\n            - json\n            - yaml\n      responses:\n        '200':\n          description: ''\n        '400':\n          description: ''\ndefinitions: {}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2tov3?format=yaml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2tov3"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "yaml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2tov3 YAML In JSON Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "swagger: '2.0'\ninfo:\n  version: ''\n  title: samsa\n  description: Convert between OpenAPI v2 and v3 formats (YAML/JSON)\nbasePath: /convert\npaths:\n  /v3tov2:\n    get:\n      operationId: GET_v3tov2\n      summary: OpenAPI 3.0 to Swagger\n      parameters:\n        - name: format\n          in: query\n          type: string\n          enum:\n            - json\n            - yaml\n      responses:\n        '200':\n          description: ''\n        '400':\n          description: ''\n  /v2tov3:\n    get:\n      operationId: v2tov3\n      summary: Swagger to OpenAPI 3.0\n      parameters:\n        - name: format\n          in: query\n          type: string\n          enum:\n            - json\n            - yaml\n      responses:\n        '200':\n          description: ''\n        '400':\n          description: ''\ndefinitions: {}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2tov3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2tov3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2tov3 JSON In YAML Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"swagger\": \"2.0\",\n    \"info\": {\n        \"version\": \"\",\n        \"title\": \"samsa\",\n        \"description\": \"Convert between OpenAPI v2 and v3 formats (YAML/JSON)\"\n    },\n    \"basePath\": \"/convert\",\n    \"paths\": {\n        \"/v3tov2\": {\n            \"get\": {\n                \"operationId\": \"GET_v3tov2\",\n                \"summary\": \"OpenAPI 3.0 to Swagger\",\n                \"parameters\": [\n                    {\n                        \"name\": \"format\",\n                        \"in\": \"query\",\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"json\",\n                            \"yaml\"\n                        ]\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"\"\n                    },\n                    \"400\": {\n                        \"description\": \"\"\n                    }\n                }\n            }\n        },\n        \"/v2tov3\": {\n            \"get\": {\n                \"operationId\": \"v2tov3\",\n                \"summary\": \"Swagger to OpenAPI 3.0\",\n                \"parameters\": [\n                    {\n                        \"name\": \"format\",\n                        \"in\": \"query\",\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"json\",\n                            \"yaml\"\n                        ]\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"\"\n                    },\n                    \"400\": {\n                        \"description\": \"\"\n                    }\n                }\n            }\n        }\n    },\n    \"definitions\": {}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2tov3?format=yaml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2tov3"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "yaml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2tov3 JSON In JSON Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"swagger\": \"2.0\",\n    \"info\": {\n        \"version\": \"\",\n        \"title\": \"samsa\",\n        \"description\": \"Convert between OpenAPI v2 and v3 formats (YAML/JSON)\"\n    },\n    \"basePath\": \"/convert\",\n    \"paths\": {\n        \"/v3tov2\": {\n            \"get\": {\n                \"operationId\": \"GET_v3tov2\",\n                \"summary\": \"OpenAPI 3.0 to Swagger\",\n                \"parameters\": [\n                    {\n                        \"name\": \"format\",\n                        \"in\": \"query\",\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"json\",\n                            \"yaml\"\n                        ]\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"\"\n                    },\n                    \"400\": {\n                        \"description\": \"\"\n                    }\n                }\n            }\n        },\n        \"/v2tov3\": {\n            \"get\": {\n                \"operationId\": \"v2tov3\",\n                \"summary\": \"Swagger to OpenAPI 3.0\",\n                \"parameters\": [\n                    {\n                        \"name\": \"format\",\n                        \"in\": \"query\",\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"json\",\n                            \"yaml\"\n                        ]\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"\"\n                    },\n                    \"400\": {\n                        \"description\": \"\"\n                    }\n                }\n            }\n        }\n    },\n    \"definitions\": {}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2tov3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2tov3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v3tov2 JSON In JSON Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"openapi\": \"3.0.0\",\n    \"info\": {\n        \"description\": \"Convert between OpenAPI v2 and v3 formats (YAML/JSON)\",\n        \"title\": \"samsa\",\n        \"version\": \"\"\n    },\n    \"servers\": [\n        {\n            \"url\": \"/convert\"\n        }\n    ],\n    \"paths\": {\n        \"/v2tov3\": {\n            \"get\": {\n                \"parameters\": [\n                    {\n                        \"in\": \"query\",\n                        \"name\": \"format\",\n                        \"schema\": {\n                            \"enum\": [\n                                \"json\",\n                                \"yaml\"\n                            ],\n                            \"type\": \"string\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\"\n                    },\n                    \"400\": {\n                        \"description\": \"Bad Request\"\n                    }\n                },\n                \"operationId\": \"v2tov3\",\n                \"summary\": \"Swagger to OpenAPI 3.0\"\n            }\n        },\n        \"/v3tov2\": {\n            \"get\": {\n                \"parameters\": [\n                    {\n                        \"in\": \"query\",\n                        \"name\": \"format\",\n                        \"schema\": {\n                            \"enum\": [\n                                \"json\",\n                                \"yaml\"\n                            ],\n                            \"type\": \"string\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\"\n                    },\n                    \"400\": {\n                        \"description\": \"Bad Request\"\n                    }\n                },\n                \"operationId\": \"GET_v3tov2\",\n                \"summary\": \"OpenAPI 3.0 to Swagger\"\n            }\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v3tov2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3tov2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v3tov2 JSON In YAML Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"openapi\": \"3.0.0\",\n    \"info\": {\n        \"description\": \"Convert between OpenAPI v2 and v3 formats (YAML/JSON)\",\n        \"title\": \"samsa\",\n        \"version\": \"\"\n    },\n    \"servers\": [\n        {\n            \"url\": \"/convert\"\n        }\n    ],\n    \"paths\": {\n        \"/v2tov3\": {\n            \"get\": {\n                \"parameters\": [\n                    {\n                        \"in\": \"query\",\n                        \"name\": \"format\",\n                        \"schema\": {\n                            \"enum\": [\n                                \"json\",\n                                \"yaml\"\n                            ],\n                            \"type\": \"string\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\"\n                    },\n                    \"400\": {\n                        \"description\": \"Bad Request\"\n                    }\n                },\n                \"operationId\": \"v2tov3\",\n                \"summary\": \"Swagger to OpenAPI 3.0\"\n            }\n        },\n        \"/v3tov2\": {\n            \"get\": {\n                \"parameters\": [\n                    {\n                        \"in\": \"query\",\n                        \"name\": \"format\",\n                        \"schema\": {\n                            \"enum\": [\n                                \"json\",\n                                \"yaml\"\n                            ],\n                            \"type\": \"string\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\"\n                    },\n                    \"400\": {\n                        \"description\": \"Bad Request\"\n                    }\n                },\n                \"operationId\": \"GET_v3tov2\",\n                \"summary\": \"OpenAPI 3.0 to Swagger\"\n            }\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v3tov2?format=yaml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3tov2"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "yaml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v3tov2 YAML In YAML Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "openapi: 3.0.0\ninfo:\n  description: Convert between OpenAPI v2 and v3 formats (YAML/JSON)\n  title: samsa\n  version: ''\nservers:\n  - url: /convert\npaths:\n  /v2tov3:\n    get:\n      parameters:\n        - in: query\n          name: format\n          schema:\n            enum:\n              - json\n              - yaml\n            type: string\n      responses:\n        '200':\n          description: OK\n        '400':\n          description: Bad Request\n      operationId: v2tov3\n      summary: Swagger to OpenAPI 3.0\n  /v3tov2:\n    get:\n      parameters:\n        - in: query\n          name: format\n          schema:\n            enum:\n              - json\n              - yaml\n            type: string\n      responses:\n        '200':\n          description: OK\n        '400':\n          description: Bad Request\n      operationId: GET_v3tov2\n      summary: OpenAPI 3.0 to Swagger\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v3tov2?format=yaml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3tov2"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "yaml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v3tov2 YAML In JSON Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "openapi: 3.0.0\ninfo:\n  description: Convert between OpenAPI v2 and v3 formats (YAML/JSON)\n  title: samsa\n  version: ''\nservers:\n  - url: /convert\npaths:\n  /v2tov3:\n    get:\n      parameters:\n        - in: query\n          name: format\n          schema:\n            enum:\n              - json\n              - yaml\n            type: string\n      responses:\n        '200':\n          description: OK\n        '400':\n          description: Bad Request\n      operationId: v2tov3\n      summary: Swagger to OpenAPI 3.0\n  /v3tov2:\n    get:\n      parameters:\n        - in: query\n          name: format\n          schema:\n            enum:\n              - json\n              - yaml\n            type: string\n      responses:\n        '200':\n          description: OK\n        '400':\n          description: Bad Request\n      operationId: GET_v3tov2\n      summary: OpenAPI 3.0 to Swagger\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v3tov2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3tov2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
