@@ -1,0 +1,62 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "",
+        "title": "samsa",
+        "description": "Convert between OpenAPI v2 and v3 formats (YAML/JSON)"
+    },
+    "basePath": "/convert",
+    "paths": {
+        "/v3tov2": {
+            "get": {
+                "operationId": "GET_v3tov2",
+                "summary": "OpenAPI 3.0 to Swagger",
+                "parameters": [
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "json",
+                            "yaml"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "400": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/v2tov3": {
+            "get": {
+                "operationId": "v2tov3",
+                "summary": "Swagger to OpenAPI 3.0",
+                "parameters": [
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "json",
+                            "yaml"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "400": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
