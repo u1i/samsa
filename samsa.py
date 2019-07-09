@@ -74,6 +74,7 @@ def swagger():
             "title": "samsa",
             "description": "Convert between OpenAPI v2 and v3 formats (YAML/JSON)"
         },
+        "host" : "",
         "basePath": "/convert",
         "paths": {
             "/v3tov2": {
