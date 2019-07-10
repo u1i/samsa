@@ -1,5 +1,5 @@
 from bottle import Bottle, request, response, route
-import subprocess, random, io
+import subprocess, random, io, string
 
 app = Bottle()
 
@@ -18,8 +18,8 @@ def convert_v2_to_v3():
 
     r = str(random.randint(1000,9999))
     f = "/tmp/" + r + ".api"
-    with io.open(f, 'w', encoding="utf-8") as outfile:
-        outfile.write(unicode(request.body.read()))
+    with io.open(f, 'wb') as outfile:
+        outfile.write(request.body.read())
     outfile.close()
 
     converted = "/tmp/" + r + ".api_out"
@@ -46,8 +46,8 @@ def convert_v3_to_v2():
 
     r = str(random.randint(1000,9999))
     f = "/tmp/" + r + ".api"
-    with io.open(f, 'w', encoding="utf-8") as outfile:
-        outfile.write(unicode(request.body.read()))
+    with io.open(f, 'wb') as outfile:
+        outfile.write(request.body.read())
     outfile.close()
 
     converted = "/tmp/" + r + ".api_out"
